@@ -1,0 +1,83 @@
+{
+  "siteName": "Smart Gadget Finder & Home AI Tech Deals",
+  "theme": {
+    "linkColor": "#e5e7eb",
+    "linkHoverColor": "#ffffff",
+    "linkBorderColor": "#9ca3af"
+  },
+  "merchants": [
+    { "id": "amazon", "name": "Amazon", "url": "https://www.amazon.com/", "categories": ["general","smart-home","networking","home-theater","computers","gaming","gadgets"], "priority": 10 },
+    { "id": "bestbuy", "name": "Best Buy", "url": "https://www.bestbuy.com/", "categories": ["general","smart-home","home-theater","appliances","computers","gaming"], "priority": 10 },
+    { "id": "walmart", "name": "Walmart", "url": "https://www.walmart.com/", "categories": ["general","smart-home","appliances","gadgets"], "priority": 8 },
+    { "id": "target", "name": "Target", "url": "https://www.target.com/", "categories": ["general","smart-home","gadgets"], "priority": 7 },
+    { "id": "newegg", "name": "Newegg", "url": "https://www.newegg.com/", "categories": ["computers","components","networking","smart-home","gaming"], "priority": 9 },
+    { "id": "bhphoto", "name": "B&H Photo Video", "url": "https://www.bhphotovideo.com/", "categories": ["cameras","audio","home-theater","computers","pro-video","lighting"], "priority": 9 },
+    { "id": "adorama", "name": "Adorama", "url": "https://www.adorama.com/", "categories": ["cameras","audio","home-theater","computers","drones","lighting"], "priority": 8 },
+    { "id": "microcenter", "name": "Micro Center", "url": "https://www.microcenter.com/", "categories": ["computers","components","networking","smart-home","gaming"], "priority": 7 },
+
+    { "id": "apple", "name": "Apple", "url": "https://www.apple.com/", "categories": ["computers","phones","tablets","home-theater","streaming","wearables"], "priority": 8 },
+    { "id": "microsoft", "name": "Microsoft Store", "url": "https://www.microsoft.com/store", "categories": ["computers","tablets","gaming","software"], "priority": 8 },
+    { "id": "dell", "name": "Dell", "url": "https://www.dell.com/", "categories": ["computers","monitors","business","servers"], "priority": 8 },
+    { "id": "hp", "name": "HP", "url": "https://www.hp.com/", "categories": ["computers","printers","monitors"], "priority": 7 },
+    { "id": "lenovo", "name": "Lenovo", "url": "https://www.lenovo.com/", "categories": ["computers","tablets","workstations"], "priority": 7 },
+    { "id": "asus", "name": "ASUS", "url": "https://www.asus.com/", "categories": ["computers","monitors","networking","gaming"], "priority": 7 },
+    { "id": "acer", "name": "Acer", "url": "https://www.acer.com/", "categories": ["computers","monitors","gaming"], "priority": 6 },
+    { "id": "samsung", "name": "Samsung", "url": "https://www.samsung.com/", "categories": ["tvs","phones","monitors","home-theater","appliances"], "priority": 8 },
+    { "id": "lg", "name": "LG", "url": "https://www.lg.com/", "categories": ["tvs","monitors","appliances","home-theater"], "priority": 7 },
+
+    { "id": "tplink", "name": "TP-Link / Kasa", "url": "https://www.tp-link.com/", "categories": ["networking","mesh-wifi","smart-home"], "priority": 9 },
+    { "id": "netgear", "name": "Netgear", "url": "https://www.netgear.com/", "categories": ["networking","mesh-wifi","pro-networking"], "priority": 8 },
+    { "id": "eero", "name": "Eero", "url": "https://eero.com/", "categories": ["mesh-wifi","smart-home"], "priority": 7 },
+    { "id": "ubiquiti", "name": "Ubiquiti / UniFi", "url": "https://ui.com/", "categories": ["networking","pro-networking","surveillance"], "priority": 7 },
+    { "id": "google-store", "name": "Google Store", "url": "https://store.google.com/", "categories": ["smart-home","nest","phones","streaming","mesh-wifi"], "priority": 8 },
+
+    { "id": "ecobee", "name": "Ecobee", "url": "https://www.ecobee.com/", "categories": ["smart-home","thermostats","energy"], "priority": 7 },
+    { "id": "philips-hue", "name": "Philips Hue", "url": "https://www.philips-hue.com/", "categories": ["lighting","smart-home"], "priority": 7 },
+    { "id": "nanoleaf", "name": "Nanoleaf", "url": "https://nanoleaf.me/", "categories": ["lighting","smart-home","decor"], "priority": 6 },
+    { "id": "lifx", "name": "LIFX", "url": "https://www.lifx.com/", "categories": ["lighting","smart-home"], "priority": 6 },
+
+    { "id": "ring", "name": "Ring", "url": "https://ring.com/", "categories": ["security-cameras","doorbells","security-systems"], "priority": 8 },
+    { "id": "arlo", "name": "Arlo", "url": "https://www.arlo.com/", "categories": ["security-cameras","doorbells"], "priority": 8 },
+    { "id": "blink", "name": "Blink", "url": "https://blinkforhome.com/", "categories": ["security-cameras","doorbells"], "priority": 7 },
+    { "id": "wyze", "name": "Wyze", "url": "https://wyze.com/", "categories": ["security-cameras","smart-home","sensors"], "priority": 7 },
+    { "id": "reolink", "name": "Reolink", "url": "https://reolink.com/", "categories": ["security-cameras","nvr-systems"], "priority": 6 },
+
+    { "id": "august", "name": "August", "url": "https://august.com/", "categories": ["smart-locks","security"], "priority": 7 },
+    { "id": "yale", "name": "Yale Home", "url": "https://www.yalehome.com/", "categories": ["smart-locks","security"], "priority": 6 },
+    { "id": "schlage", "name": "Schlage", "url": "https://www.schlage.com/", "categories": ["smart-locks","security"], "priority": 6 },
+
+    { "id": "roborock", "name": "Roborock", "url": "https://us.roborock.com/", "categories": ["robot-vacuums","cleaning-robots"], "priority": 9 },
+    { "id": "airrobo", "name": "AIRROBO", "url": "https://us.air-robo.com/", "categories": ["robot-vacuums","cleaning-robots"], "priority": 8 },
+    { "id": "narwal", "name": "Narwal", "url": "https://us.narwal.com/", "categories": ["robot-vacuums","cleaning-robots"], "priority": 8 },
+    { "id": "dreame", "name": "Dreame", "url": "https://us.dreametech.com/", "categories": ["robot-vacuums","cleaning-robots"], "priority": 8 },
+    { "id": "eufy", "name": "Eufy", "url": "https://us.eufy.com/", "categories": ["robot-vacuums","smart-home","security"], "priority": 8 },
+    { "id": "irobot", "name": "iRobot", "url": "https://www.irobot.com/", "categories": ["robot-vacuums","cleaning-robots"], "priority": 7 },
+    { "id": "sharkninja", "name": "Shark / Ninja", "url": "https://www.sharkclean.com/", "categories": ["robot-vacuums","upright-vacuums","appliances"], "priority": 6 },
+
+    { "id": "sonos", "name": "Sonos", "url": "https://www.sonos.com/", "categories": ["home-theater","audio","multi-room"], "priority": 8 },
+    { "id": "bose", "name": "Bose", "url": "https://www.bose.com/", "categories": ["home-theater","audio","headphones"], "priority": 8 },
+    { "id": "jbl", "name": "JBL", "url": "https://www.jbl.com/", "categories": ["audio","speakers","soundbars"], "priority": 7 },
+    { "id": "sony-audio", "name": "Sony Audio", "url": "https://electronics.sony.com/audio", "categories": ["audio","home-theater","headphones"], "priority": 7 },
+    { "id": "roku", "name": "Roku", "url": "https://www.roku.com/", "categories": ["streaming","home-theater"], "priority": 7 },
+    { "id": "nvidia-shield", "name": "NVIDIA Shield TV", "url": "https://www.nvidia.com/en-us/shield/", "categories": ["streaming","home-theater","gaming"], "priority": 6 },
+
+    { "id": "anker", "name": "Anker", "url": "https://www.anker.com/", "categories": ["chargers","power-banks","hubs","projectors"], "priority": 8 },
+    { "id": "ravpower", "name": "RAVPower", "url": "https://www.ravpower.com/", "categories": ["chargers","power-banks"], "priority": 6 },
+
+    { "id": "logitech", "name": "Logitech", "url": "https://www.logitech.com/", "categories": ["peripherals","mice","keyboards","webcams"], "priority": 8 },
+    { "id": "razer", "name": "Razer", "url": "https://www.razer.com/", "categories": ["gaming","peripherals","laptops"], "priority": 7 },
+    { "id": "corsair", "name": "Corsair", "url": "https://www.corsair.com/", "categories": ["peripherals","components","gaming","streaming"], "priority": 7 },
+    { "id": "steelseries", "name": "SteelSeries", "url": "https://steelseries.com/", "categories": ["gaming","headsets","mice","keyboards"], "priority": 6 },
+    { "id": "elgato", "name": "Elgato", "url": "https://www.elgato.com/", "categories": ["streaming","capture-cards","lighting","deskmounts"], "priority": 6 },
+
+    { "id": "dji", "name": "DJI", "url": "https://www.dji.com/", "categories": ["drones","gimbals","cameras"], "priority": 8 },
+    { "id": "gopro", "name": "GoPro", "url": "https://gopro.com/", "categories": ["action-cameras","accessories"], "priority": 7 },
+    { "id": "insta360", "name": "Insta360", "url": "https://www.insta360.com/", "categories": ["cameras","360-cameras","action-cameras"], "priority": 6 },
+
+    { "id": "tile", "name": "Tile", "url": "https://www.tile.com/", "categories": ["trackers","gadgets"], "priority": 6 },
+    { "id": "tractive", "name": "Tractive", "url": "https://tractive.com/", "categories": ["pet-tech","trackers"], "priority": 6 },
+
+    { "id": "brinks", "name": "Brinks Home", "url": "https://brinkshome.com/", "categories": ["security-systems","monitoring"], "priority": 7 },
+    { "id": "simplisafe", "name": "SimpliSafe", "url": "https://simplisafe.com/", "categories": ["security-systems","monitoring"], "priority": 7 }
+  ]
+}
