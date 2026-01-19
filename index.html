@@ -6,6 +6,9 @@
   <title>Smart Gadget Finder &amp; Home AI Tech Deals</title>
   <meta name="description" content="Smart Gadget Finder &amp; Home AI Tech Deals helps you compare smart home gadgets, Wi-Fi, streaming gear, and home tech with an easy AI guide and curated links to major retailers." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -19,11 +22,19 @@
         <a href="#home" class="nav-link">Home</a>
         <a href="#how-it-works" class="nav-link">How it works</a>
         <a href="#categories" class="nav-link">Gadget categories</a>
+        <a href="#ai-examples" class="nav-link">AI examples</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
     </div>
   </header>
+
+  <!-- Affiliate Disclosure Banner - FTC/ASA Compliant -->
+  <div class="affiliate-disclosure-banner">
+    <div class="container">
+      <p><strong>Affiliate Disclosure:</strong> Smart Gadget Finder earns commissions from qualifying purchases made through links on this site. This helps support our free AI-powered guidance service. Our recommendations are based on your needs and situation — not on which products pay us the most. <a href="disclaimer.html">Learn more</a></p>
+    </div>
+  </div>
 
   <main id="home">
     <section class="hero">
@@ -162,10 +173,27 @@
     <section id="categories" class="section categories-section">
       <div class="container">
         <h2 class="section-title">Complete high-tech ecosystem coverage</h2>
+
+        <!-- Editorial introduction for categories -->
+        <div class="categories-intro">
+          <p class="categories-lead">
+            Choosing the right smart home technology can be overwhelming with thousands of products across dozens of categories.
+            Below, we break down the major ecosystems you need to understand — from security and networking to entertainment
+            and automation. Each category includes guidance on what matters most, common pitfalls to avoid, and direct links
+            to trusted retailers where you can compare prices and reviews.
+          </p>
+          <p class="categories-value">
+            <strong>How Smart Gadget Finder helps:</strong> Our AI assistant can analyze your specific home layout, budget,
+            and technical comfort level to recommend products that actually fit your situation — not just what's trending or
+            heavily marketed. Ask about compatibility, installation difficulty, or which features you can skip to save money.
+          </p>
+        </div>
+
         <div class="grid four">
           <div class="card card-category">
             <h3>Smart security &amp; entry</h3>
             <p>Video doorbells, smart locks, indoor/outdoor cameras, motion sensors, window/door sensors, and security system integration.</p>
+            <p class="category-guidance">Consider placement for camera angles, whether you rent (adhesive mounts) or own (wired power), and if you need professional monitoring vs self-monitored alerts.</p>
             <ul class="mini-links">
               <li><a href="https://www.amazon.com/smart-home-devices/b/?ie=UTF8&node=6563140011" target="_blank" rel="sponsored noopener">Smart home on Amazon</a></li>
               <li><a href="https://www.bestbuy.com/site/smart-home-automation/smart-home-solutions/pcmcat254000050002.c" target="_blank" rel="sponsored noopener">Smart devices at Best Buy</a></li>
@@ -174,6 +202,7 @@
           <div class="card card-category">
             <h3>Whole-home Wi-Fi &amp; networking</h3>
             <p>Wi-Fi 6/6E routers, mesh systems, range extenders, wired backhaul, gaming routers, network switches, and Ethernet cabling.</p>
+            <p class="category-guidance">Home size and wall materials matter most. A 3-bedroom apartment needs different gear than a 3-story house. Our AI can help you calculate access point placement.</p>
             <ul class="mini-links">
               <li><a href="https://www.amazon.com/Wireless-Routers/b?ie=UTF8&node=300189" target="_blank" rel="sponsored noopener">Routers on Amazon</a></li>
               <li><a href="https://www.newegg.com/Networking/Store/ID-9" target="_blank" rel="sponsored noopener">Networking at Newegg</a></li>
@@ -182,6 +211,7 @@
           <div class="card card-category">
             <h3>Streaming &amp; home entertainment</h3>
             <p>4K/8K smart TVs, streaming boxes (Roku, Fire TV, Apple TV), soundbars, AV receivers, multi-room audio, and HDMI gear.</p>
+            <p class="category-guidance">Match your streaming subscriptions to the right device ecosystem. Room size determines whether a soundbar suffices or you need a full surround setup.</p>
             <ul class="mini-links">
               <li><a href="https://www.roku.com/" target="_blank" rel="sponsored noopener">Roku players</a></li>
               <li><a href="https://www.amazon.com/fire-tv/" target="_blank" rel="sponsored noopener">Amazon Fire TV</a></li>
@@ -190,6 +220,7 @@
           <div class="card card-category">
             <h3>Smart comfort &amp; automation</h3>
             <p>Smart thermostats, plugs, lighting systems (Hue, LIFX), automated blinds, ceiling fans, air purifiers, and humidifiers.</p>
+            <p class="category-guidance">Check your HVAC compatibility before buying a thermostat. Start with smart plugs for instant automation wins before committing to full ecosystems.</p>
             <ul class="mini-links">
               <li><a href="https://www.amazon.com/smart-home-devices/b/?ie=UTF8&node=6563140011" target="_blank" rel="sponsored noopener">Smart home on Amazon</a></li>
               <li><a href="https://www.bestbuy.com/site/smart-home-automation/smart-home-solutions/pcmcat254000050002.c" target="_blank" rel="sponsored noopener">Smart devices at Best Buy</a></li>
@@ -198,6 +229,7 @@
           <div class="card card-category">
             <h3>Cleaning &amp; maintenance robots</h3>
             <p>Robot vacuums (Roomba, Eufy, Roborock), robot mops, handheld vacuums, and automated litter boxes.</p>
+            <p class="category-guidance">Floor type (carpet vs hardwood), pet hair, and multi-level homes all affect which robot fits. Budget options work great for small spaces; larger homes need smarter navigation.</p>
             <ul class="mini-links">
               <li><a href="https://www.irobot.com/" target="_blank" rel="sponsored noopener">Roomba by iRobot</a></li>
               <li><a href="https://us.eufy.com/" target="_blank" rel="sponsored noopener">Eufy home devices</a></li>
@@ -206,6 +238,7 @@
           <div class="card card-category">
             <h3>Work-from-home office tech</h3>
             <p>Monitors (4K, ultrawide, ergonomic), docking stations, webcams, microphones, standing desks, ergonomic chairs, and lighting.</p>
+            <p class="category-guidance">Prioritize a good webcam and microphone if you're on video calls daily. Monitor size depends on your desk depth — measure first to avoid returns.</p>
             <ul class="mini-links">
               <li><a href="https://www.amazon.com/Computer-Monitors/b?ie=UTF8&node=1292115011" target="_blank" rel="sponsored noopener">Monitors on Amazon</a></li>
               <li><a href="https://www.bestbuy.com/site/computers-pcs/computer-accessories/abcat0515000.c" target="_blank" rel="sponsored noopener">PC accessories at Best Buy</a></li>
@@ -214,6 +247,7 @@
           <div class="card card-category">
             <h3>Smart hubs &amp; voice assistants</h3>
             <p>Amazon Echo, Google Home, Apple HomePod, Samsung SmartThings hubs, and protocol bridges (Zigbee, Z-Wave, Matter).</p>
+            <p class="category-guidance">Pick your ecosystem early — mixing Alexa, Google, and HomeKit devices adds complexity. Matter protocol is making cross-platform easier, but not all devices support it yet.</p>
             <ul class="mini-links">
               <li><a href="https://www.amazon.com/smart-home-devices/b/?ie=UTF8&node=6563140011" target="_blank" rel="sponsored noopener">Smart home on Amazon</a></li>
               <li><a href="https://www.bestbuy.com/site/smart-home-automation/smart-home-solutions/pcmcat254000050002.c" target="_blank" rel="sponsored noopener">Smart devices at Best Buy</a></li>
@@ -222,6 +256,7 @@
           <div class="card card-category">
             <h3>Future-leaning tech</h3>
             <p>Home servers/NAS, energy monitoring systems, smart breaker panels, EV chargers, and advanced AI integrations.</p>
+            <p class="category-guidance">These are power-user categories. Start only if you're comfortable with basic networking. Energy monitors pay for themselves by revealing wasteful appliances.</p>
             <ul class="mini-links">
               <li><a href="https://www.newegg.com/" target="_blank" rel="sponsored noopener">Tech at Newegg</a></li>
               <li><a href="https://www.bhphotovideo.com/" target="_blank" rel="sponsored noopener">B&H Photo Video</a></li>
@@ -427,6 +462,192 @@
       </div>
     </section>
 
+    <!-- AI Examples Section - Static content for crawlers -->
+    <section id="ai-examples" class="section ai-examples-section">
+      <div class="container">
+        <h2 class="section-title">See how the AI helps real decisions</h2>
+        <p class="section-intro">
+          Our AI assistant doesn't just list products — it asks questions, understands your situation, and provides
+          personalized recommendations. Below are examples of real conversations showing how the AI helps users
+          navigate complex technology decisions.
+        </p>
+
+        <div class="ai-examples-grid">
+          <!-- Example 1: Home Security -->
+          <div class="ai-example-card">
+            <div class="ai-example-header">
+              <span class="ai-example-category">Home Security</span>
+              <span class="ai-example-label">Example Conversation</span>
+            </div>
+            <div class="ai-example-conversation">
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> I want to set up security cameras at my house but I'm not sure where to start. I have a two-story home with a front door, back door, and garage.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Great question! Let me help you design a solid security setup. First, a few quick questions:
+                <ul>
+                  <li>Do you rent or own? (This affects whether you can drill for wired power.)</li>
+                  <li>What's your budget range? (Under $200, $200-500, or $500+)</li>
+                  <li>Do you want professional monitoring with emergency dispatch, or are you okay with self-monitoring via smartphone alerts?</li>
+                </ul>
+                For a two-story home with 3 entry points, I typically recommend starting with a video doorbell for your front entry, one outdoor camera covering the driveway/garage, and one covering the backyard/back door. Indoor cameras are optional unless you want to monitor pets or specific rooms.
+              </div>
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> I own the home, budget is around $400, and self-monitoring is fine.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Perfect — with a $400 budget and self-monitoring, you have solid options.
+
+                <strong>My recommendation:</strong>
+                <ul>
+                  <li><strong>Front door:</strong> Ring Video Doorbell 4 (~$200) or the budget-friendly Blink Video Doorbell (~$50). Ring has better video quality and two-way audio.</li>
+                  <li><strong>Outdoor cameras (2):</strong> Wyze Cam Outdoor v2 (~$100 for two) offers excellent value with color night vision. For better quality, consider Arlo Essential cameras (~$130 each).</li>
+                </ul>
+
+                Since you own your home, I'd suggest wired power for the doorbell (no battery charging) and outdoor outlets for the cameras if possible. Want me to break down the specific features that matter for your situation, or compare these options in more detail?
+              </div>
+            </div>
+            <div class="ai-example-cta">
+              <a href="chat.html" class="btn btn-ghost">Ask about your security setup</a>
+            </div>
+          </div>
+
+          <!-- Example 2: Wi-Fi Dead Zones -->
+          <div class="ai-example-card">
+            <div class="ai-example-header">
+              <span class="ai-example-category">Whole-Home Wi-Fi</span>
+              <span class="ai-example-label">Example Conversation</span>
+            </div>
+            <div class="ai-example-conversation">
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> My Wi-Fi is terrible in the bedrooms upstairs. I have a 2,400 sq ft house and the router is in the living room. Video calls keep dropping.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Frustrating! Dead zones in a 2,400 sq ft multi-story home are really common when using a single router. A few questions to narrow down the best fix:
+                <ul>
+                  <li>What internet speed do you pay for? (100 Mbps, 500 Mbps, gigabit?)</li>
+                  <li>Do you have Ethernet ports wired throughout the house, or just near the router?</li>
+                  <li>How many devices typically connect at once? (Phones, laptops, smart TVs, smart home gadgets)</li>
+                </ul>
+                For most homes your size, a mesh Wi-Fi system is the go-to solution — it uses multiple units placed throughout the house to create seamless coverage.
+              </div>
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> 500 Mbps internet, no Ethernet upstairs, and we have maybe 15-20 devices connected.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Good news — 500 Mbps is plenty, and a mesh system will solve your coverage issues without needing to run Ethernet cables.
+
+                <strong>My recommendations for your situation:</strong>
+                <ul>
+                  <li><strong>Best value:</strong> TP-Link Deco X55 (3-pack, ~$230) — Wi-Fi 6, handles 150+ devices, easy setup via app. Place one in living room, one upstairs hallway, one in the primary bedroom.</li>
+                  <li><strong>Premium option:</strong> Eero Pro 6E (2-pack, ~$450) — faster Wi-Fi 6E, built-in Zigbee hub for smart home devices, excellent for future-proofing.</li>
+                  <li><strong>Budget pick:</strong> Google Nest Wifi (3-pack, ~$200) — solid performance, integrates with Google Home ecosystem if you use that.</li>
+                </ul>
+
+                With no Ethernet upstairs, wireless mesh backhaul will work fine for your speeds. Want me to explain the differences between these, or help you decide which features actually matter for your usage?
+              </div>
+            </div>
+            <div class="ai-example-cta">
+              <a href="chat.html" class="btn btn-ghost">Fix your Wi-Fi dead zones</a>
+            </div>
+          </div>
+
+          <!-- Example 3: Robot Vacuum -->
+          <div class="ai-example-card">
+            <div class="ai-example-header">
+              <span class="ai-example-category">Cleaning Robots</span>
+              <span class="ai-example-label">Example Conversation</span>
+            </div>
+            <div class="ai-example-conversation">
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> Looking for a robot vacuum recommendation. I have two dogs and mostly hardwood floors with a few area rugs.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Two dogs plus hardwood floors is a classic combo — pet hair and hardwood actually work well together for robot vacuums. A few things to consider:
+                <ul>
+                  <li>Do your dogs shed heavily? (Long hair vs short hair affects tangle risk)</li>
+                  <li>How large is the space? (Open floor plan? Multiple rooms?)</li>
+                  <li>Would you want a vacuum that also mops, or just vacuuming?</li>
+                  <li>Budget range? (Under $300, $300-600, or $600+)</li>
+                </ul>
+              </div>
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> They're Labs so heavy shedding, about 1,800 sq ft open floor plan, mopping would be nice, budget around $500.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Labs = serious shedding! You'll want something with strong suction, a self-emptying base (so you're not emptying the bin daily), and a tangle-free brush roll.
+
+                <strong>Top picks for your situation:</strong>
+                <ul>
+                  <li><strong>Best overall:</strong> Roborock Q7 Max+ (~$500) — 4,200Pa suction, LiDAR navigation for efficient cleaning, self-emptying base, and mops. Handles pet hair exceptionally well and the mop feature is solid for hardwood.</li>
+                  <li><strong>Alternative:</strong> iRobot Roomba j7+ (~$600, often on sale for ~$500) — specifically designed with pet owners in mind, avoids pet waste accidents, rubber brush rolls resist tangles.</li>
+                  <li><strong>Budget stretch:</strong> Eufy X8 Pro (~$450) — great suction, self-emptying, but no mopping.</li>
+                </ul>
+
+                For 1,800 sq ft with heavy shedders, I'd lean toward the Roborock Q7 Max+ — the self-emptying base is essential so you're not dealing with the bin every day, and the mopping is a nice bonus for hardwood. Want me to compare specific features between these options?
+              </div>
+            </div>
+            <div class="ai-example-cta">
+              <a href="chat.html" class="btn btn-ghost">Find your perfect robot vacuum</a>
+            </div>
+          </div>
+
+          <!-- Example 4: Home Office -->
+          <div class="ai-example-card">
+            <div class="ai-example-header">
+              <span class="ai-example-category">Work From Home</span>
+              <span class="ai-example-label">Example Conversation</span>
+            </div>
+            <div class="ai-example-conversation">
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> I need to upgrade my home office setup. I'm on video calls most of the day and my current webcam makes me look terrible.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Looking professional on video calls makes a big difference! Let me help you upgrade strategically. A few questions:
+                <ul>
+                  <li>What's your current setup? (Laptop built-in cam? External webcam? Lighting?)</li>
+                  <li>Is your room naturally bright, or do you often have calls in dim lighting?</li>
+                  <li>Do you also need better audio, or is your microphone/headset working well?</li>
+                  <li>Budget for the upgrade?</li>
+                </ul>
+                Often, lighting improvements make more difference than an expensive camera — but the right webcam combined with proper lighting is a game-changer.
+              </div>
+              <div class="ai-message ai-message-user">
+                <strong>User:</strong> Using laptop cam, room is pretty dim with one window behind me, audio seems okay with my AirPods, budget maybe $200-300.
+              </div>
+              <div class="ai-message ai-message-assistant">
+                <strong>AI Guide:</strong> Ah — window behind you is your biggest issue! That's causing your camera to underexpose your face (backlit = dark face, bright background). Here's how I'd prioritize your $200-300:
+
+                <strong>Priority 1: Lighting (~$50-80)</strong>
+                <ul>
+                  <li>Elgato Key Light Mini (~$80) — professional lighting, mounts to desk, app-controlled brightness/temperature. One light facing you will transform your video quality.</li>
+                  <li>Budget option: Any ring light with adjustable temperature (~$30-50) works too.</li>
+                </ul>
+
+                <strong>Priority 2: Webcam (~$100-150)</strong>
+                <ul>
+                  <li>Logitech C920s (~$70) — the reliable standard, 1080p, good for most calls.</li>
+                  <li>Logitech Brio 4K (~$150) — sharper image, better low-light performance, auto-framing.</li>
+                </ul>
+
+                <strong>Recommendation:</strong> Get the Elgato Key Light Mini + Logitech Brio 4K (~$230 total). The lighting will immediately fix the backlit problem, and the Brio handles remaining dim conditions well. If budget is tight, the C920s + ring light (~$100-120) will still be a major upgrade.
+
+                Want me to explain webcam features in more detail, or help with monitor/desk setup?
+              </div>
+            </div>
+            <div class="ai-example-cta">
+              <a href="chat.html" class="btn btn-ghost">Upgrade your home office</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-examples-footer">
+          <p>These examples show how our AI provides personalized, context-aware recommendations rather than generic product lists. Every conversation adapts to your specific home, budget, and needs.</p>
+          <a href="chat.html" class="btn btn-primary">Start your personalized conversation</a>
+        </div>
+      </div>
+    </section>
+
     <section id="faq" class="section faq-section">
       <div class="container">
         <h2 class="section-title">Frequently asked questions</h2>
@@ -521,15 +742,18 @@
       <div>
         <strong>Smart Gadget Finder &amp; Home AI Tech Deals</strong>
         <p class="footer-meta">
-          Some suggestions may include sponsored partners. This does not affect guidance.
+          <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases.
         </p>
         <p class="footer-meta">
           For advertising &amp; business inquiries only:
-          <a href="mailto:advertise@smartgadgetfinder.com">advertise@smartgadgetfinder.com</a>
+          <a href="mailto:advertise@smartgadgetfinderai.com">advertise@smartgadgetfinderai.com</a>
         </p>
       </div>
       <div class="footer-links">
         <a href="chat.html">Ask the AI</a>
+        <a href="guides/how-to-choose-smart-home-gadgets-2025.html">Buying Guide</a>
+        <a href="guides/best-home-wifi-solutions-compared.html">Wi-Fi Guide</a>
+        <a href="guides/ultimate-smart-home-setup-guide.html">Setup Guide</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="disclaimer.html">Disclaimer</a>
