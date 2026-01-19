@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://smartgadgetfinderai.com/sitemap.xml
+
+# Crawl-delay for considerate crawling
+Crawl-delay: 1

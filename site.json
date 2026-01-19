@@ -1,14 +1,15 @@
 {
   "siteName": "Smart Gadget Finder & Home AI Tech Deals",
-  "domain": "smartgadgetfinder.com",
-  "contactEmail": "advertise@smartgadgetfinder.com",
+  "domain": "smartgadgetfinderai.com",
+  "contactEmail": "advertise@smartgadgetfinderai.com",
   "reviewSafe": true,
   "aiEnabled": true,
   "offersBarEnabled": false,
   "createdAt": "2025-11-07",
+  "lastUpdated": "2025-01-19",
   "legal": {
-    "privacy": "/legal/privacy.html",
-    "terms": "/legal/terms.html",
-    "disclaimer": "/legal/disclaimer.html"
+    "privacy": "/privacy.html",
+    "terms": "/terms.html",
+    "disclaimer": "/disclaimer.html"
   }
 }
