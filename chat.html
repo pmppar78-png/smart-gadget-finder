@@ -687,13 +687,21 @@
         const errorMessage = 'Sorry, there was a problem talking to the AI. Please try again.';
         conversation.push({ role: 'assistant', content: errorMessage });
         appendMessage('assistant', errorMessage);
+        scrollToBottom(true);
       } finally {
         // Re-enable input
         isWaiting = false;
         chatInput.disabled = false;
         sendButton.disabled = false;
         sendButton.textContent = 'Send';
-        chatInput.focus();
+        // On mobile devices, do NOT auto-focus input after send
+        // This prevents the keyboard from popping up and blocking the assistant's response
+        // Mobile detection: check if touch is primary input and screen is small
+        var isMobileDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0) && window.innerWidth < 768;
+        if (!isMobileDevice) {
+          chatInput.focus();
+        }
+        // On mobile, user can tap input when ready to type again
       }
     }
 
@@ -724,7 +732,11 @@
       const welcomeMessage = "Welcome to Smart Gadget Finder! I'm here to help you navigate the world of smart home technology. Whether you're looking to improve your home security, eliminate Wi-Fi dead zones, set up a home entertainment system, or automate your daily routines, I can provide personalized guidance based on your specific situation. Just tell me about your home, your budget, and what challenges you're facing, and I'll walk you through the options that make sense for you.";
       conversation.push({ role: 'assistant', content: welcomeMessage });
       appendMessage('assistant', welcomeMessage);
-      chatInput.focus();
+      // Only auto-focus on desktop - on mobile, let user tap to engage (avoids unwanted keyboard popup)
+      var isMobileDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0) && window.innerWidth < 768;
+      if (!isMobileDevice) {
+        chatInput.focus();
+      }
     }
 
     // Header scroll effect
