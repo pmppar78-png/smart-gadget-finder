@@ -504,11 +504,28 @@
 
     chatInput.addEventListener('input', autoResizeTextarea);
 
-    // Scroll to bottom of chat
+    // Scroll to bottom of chat - mobile-friendly with scrollIntoView
     function scrollToBottom() {
       setTimeout(() => {
-        chatContainer.scrollTop = chatContainer.scrollHeight;
+        const lastMessage = chatMessages.lastElementChild;
+        if (lastMessage) {
+          // Use scrollIntoView for better mobile keyboard handling
+          lastMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        } else {
+          // Fallback if no messages
+          chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
       }, 100);
+    }
+
+    // Mobile viewport resize handler - ensures latest message visible when keyboard opens/closes
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', function() {
+        // Only trigger if we're in the middle of a chat (has messages beyond welcome)
+        if (chatMessages.children.length > 0) {
+          scrollToBottom();
+        }
+      });
     }
 
     // Simple Markdown link parser - FTC compliant with rel="sponsored"
