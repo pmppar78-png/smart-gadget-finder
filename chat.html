@@ -151,7 +151,7 @@
       flex-direction: column;
       align-items: center;
       padding: 6rem 1rem 2rem;
-      margin-top: 80px;
+      margin-top: 115px; /* Account for fixed header + disclosure banner */
       background: #000000;
     }
 
@@ -368,7 +368,7 @@
 
       .chat-container {
         padding: 5rem 0.5rem 1rem;
-        margin-top: 160px;
+        margin-top: 195px; /* Account for taller mobile header + disclosure */
       }
 
       .chat-messages {
@@ -446,9 +446,9 @@
     </div>
   </header>
 
-  <!-- Affiliate Disclosure Banner - FTC/ASA Compliant -->
-  <div style="text-align: center; padding: 0.875rem 1rem; font-size: 0.8125rem; color: #b0b0b0; background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%); border-bottom: 1px solid #3a3a3a;">
-    <strong style="color: #e0e0e0;">Affiliate Disclosure:</strong> Smart Gadget Finder earns commissions from qualifying purchases made through links on this site. Our recommendations are based on your needs — not on compensation. <a href="disclaimer.html" style="color: #888888; text-decoration: underline;">Learn more</a>
+  <!-- Affiliate Disclosure Banner - FTC/ASA Compliant - Positioned for first-impression visibility -->
+  <div id="affiliateDisclosure" style="position: fixed; top: 65px; left: 0; right: 0; z-index: 999; text-align: center; padding: 0.75rem 1rem; font-size: 0.8125rem; color: #b0b0b0; background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%); border-bottom: 1px solid #3a3a3a; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+    <strong style="color: #e0e0e0;">Affiliate Disclosure:</strong> Smart Gadget Finder earns commissions from qualifying purchases made through links in this chat. Our recommendations are based on your needs — not on compensation. <a href="disclaimer.html" style="color: #888888; text-decoration: underline;">Learn more</a>
   </div>
 
   <!-- Main chat area -->
@@ -471,7 +471,7 @@
       <button id="sendButton" type="submit" class="send-button">Send</button>
     </form>
     <div class="disclaimer">
-      <strong>Affiliate Disclosure:</strong> Recommendations may include affiliate links. We earn commissions from qualifying purchases, at no extra cost to you.<br>
+      <strong>Affiliate Disclosure:</strong> Recommendations may include affiliate links. We earn commissions from qualifying purchases, at no extra cost to you. <a href="editorial.html" style="color: #888888; text-decoration: underline;">Editorial Standards</a><br>
       This assistant is for general information only. Always verify product details and terms with the retailer before purchasing.
     </div>
   </div>
@@ -511,10 +511,10 @@
       }, 100);
     }
 
-    // Simple Markdown link parser
+    // Simple Markdown link parser - FTC compliant with rel="sponsored"
     function parseMarkdownLinks(text) {
-      // Convert Markdown links [text](url) to HTML <a> tags
-      return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+      // Convert Markdown links [text](url) to HTML <a> tags with sponsored rel attribute
+      return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="sponsored noopener noreferrer">$1</a>');
     }
 
     // Escape HTML to prevent XSS (except for our parsed links)
