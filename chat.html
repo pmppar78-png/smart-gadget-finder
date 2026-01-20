@@ -456,6 +456,8 @@
     <div class="chat-messages" id="chatMessages">
       <!-- Messages will be appended here -->
     </div>
+    <!-- Bottom sentinel for reliable scroll targeting -->
+    <div id="chatBottomSentinel" style="height: 1px; width: 100%;"></div>
   </div>
 
   <!-- Bottom input area -->
@@ -487,6 +489,8 @@
     const chatForm = document.getElementById('chatForm');
     const chatInput = document.getElementById('chatInput');
     const sendButton = document.getElementById('sendButton');
+    const bottomSentinel = document.getElementById('chatBottomSentinel');
+    const inputContainer = document.querySelector('.input-container');
 
     console.log('Chat page loaded - DOM elements found:', {
       chatContainer: !!chatContainer,
@@ -504,29 +508,61 @@
 
     chatInput.addEventListener('input', autoResizeTextarea);
 
-    // Scroll to bottom of chat - mobile-friendly with scrollIntoView
-    function scrollToBottom() {
-      setTimeout(() => {
-        const lastMessage = chatMessages.lastElementChild;
-        if (lastMessage) {
-          // Use scrollIntoView for better mobile keyboard handling
-          lastMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        } else {
-          // Fallback if no messages
-          chatContainer.scrollTop = chatContainer.scrollHeight;
-        }
-      }, 100);
+    // Mobile keyboard-aware scroll to bottom
+    // Uses requestAnimationFrame and multiple attempts to handle keyboard animation delays
+    function scrollToBottom(forceImmediate) {
+      const doScroll = function() {
+        requestAnimationFrame(function() {
+          if (bottomSentinel) {
+            bottomSentinel.scrollIntoView({ behavior: forceImmediate ? 'auto' : 'smooth', block: 'end' });
+          } else {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+          }
+        });
+      };
+
+      // First scroll attempt immediately
+      doScroll();
+
+      // Second attempt after 150ms to handle keyboard animation delays
+      setTimeout(doScroll, 150);
+
+      // Third attempt after 300ms for slower devices/animations
+      setTimeout(doScroll, 300);
     }
 
-    // Mobile viewport resize handler - ensures latest message visible when keyboard opens/closes
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener('resize', function() {
-        // Only trigger if we're in the middle of a chat (has messages beyond welcome)
-        if (chatMessages.children.length > 0) {
-          scrollToBottom();
+    // Mobile viewport resize handler - adjusts chat container when keyboard opens/closes
+    // Uses visualViewport API to detect keyboard height and adjust padding accordingly
+    (function setupMobileViewportHandler() {
+      if (!window.visualViewport) return;
+
+      var lastHeight = window.visualViewport.height;
+
+      function handleViewportChange() {
+        var currentHeight = window.visualViewport.height;
+        var heightDiff = window.innerHeight - currentHeight;
+
+        // Keyboard is likely open if viewport is significantly smaller than window
+        if (heightDiff > 100) {
+          // Keyboard is open - add bottom padding to keep messages visible above keyboard
+          chatContainer.style.paddingBottom = heightDiff + 'px';
+        } else {
+          // Keyboard is closed - reset padding
+          chatContainer.style.paddingBottom = '';
         }
-      });
-    }
+
+        // Scroll to bottom when keyboard state changes
+        if (currentHeight !== lastHeight) {
+          lastHeight = currentHeight;
+          if (chatMessages.children.length > 0) {
+            scrollToBottom(true);
+          }
+        }
+      }
+
+      window.visualViewport.addEventListener('resize', handleViewportChange);
+      window.visualViewport.addEventListener('scroll', handleViewportChange);
+    })();
 
     // Simple Markdown link parser - FTC compliant with rel="sponsored"
     function parseMarkdownLinks(text) {
@@ -641,6 +677,9 @@
         // Add assistant response to conversation and UI
         conversation.push({ role: 'assistant', content: reply });
         appendMessage('assistant', reply);
+
+        // Extra scroll to ensure message visible above keyboard
+        scrollToBottom(true);
 
       } catch (error) {
         console.error('Error sending message:', error);
